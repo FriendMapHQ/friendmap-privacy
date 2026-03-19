@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — FriendMap</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --yellow: #F7CD4A;
+      --yellow-light: #FFF7D9;
+      --yellow-dark: #e0b830;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --border: #f0e8c8;
+      --bg: #fffef9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--yellow);
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.2rem;
+      color: #fff;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo span {
+      display: inline-block;
+      width: 10px; height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      margin-left: 4px;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+    }
+
+    header h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      margin-top: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .last-updated {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* ── Intro card ── */
+    .intro {
+      background: var(--yellow-light);
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+      font-size: 0.97rem;
+      color: #555;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 48px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      background: var(--yellow);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      color: #444;
+      padding: 8px 0 8px 20px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 7px; height: 7px;
+      background: var(--yellow);
+      border-radius: 50%;
+    }
+
+    /* ── Third party table ── */
+    .third-party {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+
+    .third-party th {
+      background: var(--yellow);
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .third-party th:first-child { border-radius: 8px 0 0 0; }
+    .third-party th:last-child { border-radius: 0 8px 0 0; }
+
+    .third-party td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #444;
+      vertical-align: top;
+    }
+
+    .third-party tr:last-child td { border-bottom: none; }
+    .third-party tr:nth-child(even) td { background: var(--yellow-light); }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: var(--yellow);
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      padding-bottom: 2px;
+    }
+
+    .contact-box a:hover {
+      border-color: #fff;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 30px 24px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 44px 20px 38px; }
+      .logo { font-size: 1.8rem; }
+      .container { padding: 40px 20px 80px; }
+      section h2 { font-size: 1.25rem; }
+      .third-party { font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">FriendMap<span></span></div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: March 2026</p>
+  </header>
+
+  <div class="container">
+
+    <div class="intro">
+      Your privacy matters to us. This policy explains what data FriendMap collects, why we collect it, how it is stored, and your rights regarding your personal information. FriendMap is operated as an independent app and is available in Ireland.
+    </div>
+
+    <section>
+      <h2><span class="icon">👤</span> Who We Are</h2>
+      <p>FriendMap is a location-based social app that allows users to discover, create, and join local communities, chat with members, and organise real-world meetups. The app is developed and maintained independently.</p>
+      <p>If you have any questions about this privacy policy, you can contact us at the email address listed at the bottom of this page.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📋</span> What Data We Collect</h2>
+      <p>We collect the following personal data when you use FriendMap:</p>
+      <ul>
+        <li><strong>Account information</strong> — your username, email address, date of birth, and profile picture (optional)</li>
+        <li><strong>Location data</strong> — your approximate location, used only to show nearby communities on the map. We do not store your precise location or track your movements.</li>
+        <li><strong>Messages and content</strong> — messages you send in community chats, meetup suggestions, and votes</li>
+        <li><strong>Community activity</strong> — communities you create or join, and any meetups you participate in</li>
+        <li><strong>Push notification token</strong> — a device token used to send you notifications about meetup reminders (via Expo)</li>
+        <li><strong>Reports</strong> — if you submit a report about a user or community, we store the reason and any description you provide</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🎯</span> Why We Collect It</h2>
+      <ul>
+        <li>To create and manage your account</li>
+        <li>To show you communities near your location on the map</li>
+        <li>To enable real-time chat within communities</li>
+        <li>To facilitate meetup planning and voting</li>
+        <li>To send push notifications for meetup reminders</li>
+        <li>To enforce our community guidelines through reporting and moderation</li>
+        <li>To verify you are at least 18 years of age</li>
+      </ul>
+      <p>We do not use your data for advertising, and we do not sell your data to any third party.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🗄️</span> How We Store Your Data</h2>
+      <p>Your data is stored securely using the following services:</p>
+      <ul>
+        <li><strong>MongoDB Atlas</strong> — stores your account information, messages, community data, and reports on secure cloud servers</li>
+        <li><strong>Cloudinary</strong> — stores profile pictures and community avatars as images on a secure content delivery network</li>
+      </ul>
+      <p>Data is transmitted over HTTPS and WebSocket Secure (WSS) connections. We retain your data for as long as your account is active. When you delete your account, all of your personal data, messages, and uploaded images are permanently deleted.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🤝</span> Third-Party Services</h2>
+      <p>FriendMap uses the following third-party services. Each has its own privacy policy.</p>
+      <table class="third-party">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>MongoDB Atlas</td>
+            <td>Database storage</td>
+            <td>Account info, messages, community data</td>
+          </tr>
+          <tr>
+            <td>Cloudinary</td>
+            <td>Image storage</td>
+            <td>Profile and community avatar images</td>
+          </tr>
+          <tr>
+            <td>Google Maps SDK</td>
+            <td>Map display</td>
+            <td>No personal data shared</td>
+          </tr>
+          <tr>
+            <td>Expo (Push Notifications)</td>
+            <td>Meetup reminders</td>
+            <td>Device push token only</td>
+          </tr>
+          <tr>
+            <td>Render</td>
+            <td>Backend hosting</td>
+            <td>Standard server request logs</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="icon">📍</span> Location Data</h2>
+      <p>FriendMap requests access to your device location solely to centre the map on your position and show nearby communities. We do not store your precise GPS coordinates, track your location over time, or share your location with other users.</p>
+      <p>Location permission is optional — you can use FriendMap without granting location access, though the map will default to a general view of Ireland.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">👶</span> Age Requirement</h2>
+      <p>FriendMap is intended for users who are 18 years of age or older. We collect your date of birth at registration solely to verify this requirement. Users under 18 are not permitted to use the app, and any account found to belong to a minor will be deleted.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔔</span> Push Notifications</h2>
+      <p>If you grant permission, FriendMap may send you push notifications to remind you of upcoming meetups you have joined. These notifications are sent via Expo's push notification service. Your device token is stored securely and used only for this purpose. You can disable notifications at any time through your device settings.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">⚖️</span> Your Rights</h2>
+      <p>You have the following rights regarding your personal data:</p>
+      <ul>
+        <li><strong>Access</strong> — you can view your account information in the app at any time</li>
+        <li><strong>Correction</strong> — you can update your username and profile picture in User Settings</li>
+        <li><strong>Deletion</strong> — you can permanently delete your account and all associated data from the User Settings screen. This action is immediate and irreversible.</li>
+        <li><strong>Data requests</strong> — you can contact us to request a copy of your data or ask any questions about how your data is used</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="icon">🛡️</span> Data Security</h2>
+      <p>We take reasonable steps to protect your personal data against unauthorised access, loss, or misuse. All data is transmitted over encrypted connections (HTTPS/WSS), and access to our database is restricted and protected by authentication.</p>
+      <p>However, no method of transmission over the internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔄</span> Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of FriendMap after changes are posted constitutes your acceptance of the updated policy.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">✉️</span> Contact Us</h2>
+      <div class="contact-box">
+        <p>Have a question about your privacy or want to request your data?</p>
+        <a href="mailto:friendmap.app@proton.me">friendmap.app@proton.me</a>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.8);">We aim to respond to all privacy requests within 7 days.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2026 FriendMap. All rights reserved.
+  </footer>
+
+</body>
+</html>
