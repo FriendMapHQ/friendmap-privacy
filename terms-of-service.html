@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — FriendMap</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --yellow: #F7CD4A;
+      --yellow-light: #FFF7D9;
+      --yellow-dark: #e0b830;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --border: #f0e8c8;
+      --bg: #fffef9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: var(--yellow);
+      padding: 60px 24px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .logo {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.2rem;
+      color: #fff;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo span {
+      display: inline-block;
+      width: 10px; height: 10px;
+      background: #fff;
+      border-radius: 50%;
+      margin-left: 4px;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+    }
+
+    header h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.85);
+      margin-top: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+
+    .last-updated {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 6px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    .intro {
+      background: var(--yellow-light);
+      border-left: 4px solid var(--yellow);
+      border-radius: 0 12px 12px 0;
+      padding: 24px 28px;
+      margin-bottom: 52px;
+      font-size: 0.97rem;
+      color: #555;
+    }
+
+    section {
+      margin-bottom: 48px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      background: var(--yellow);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 14px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      color: #444;
+      padding: 8px 0 8px 20px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 7px; height: 7px;
+      background: var(--yellow);
+      border-radius: 50%;
+    }
+
+    .contact-box {
+      background: var(--yellow);
+      border-radius: 16px;
+      padding: 28px 32px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255,255,255,0.5);
+      padding-bottom: 2px;
+    }
+
+    .contact-box a:hover {
+      border-color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 24px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 44px 20px 38px; }
+      .logo { font-size: 1.8rem; }
+      .container { padding: 40px 20px 80px; }
+      section h2 { font-size: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">FriendMap<span></span></div>
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last updated: April 2026</p>
+  </header>
+
+  <div class="container">
+
+    <div class="intro">
+      By creating an account and using FriendMap, you agree to these Terms of Service. Please read them carefully. If you do not agree, you may not use the app.
+    </div>
+
+    <section>
+      <h2><span class="icon">📌</span> About FriendMap</h2>
+      <p>FriendMap is a location-based social app that allows users to discover, create, and join local communities, chat with members, and organise real-world meetups. The app is developed and maintained independently.</p>
+      <p>By accessing or using FriendMap, you confirm that you have read, understood, and agree to be bound by these Terms of Service, as well as our <a href="privacy.html" style="color: var(--yellow-dark); font-weight: 600;">Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔞</span> Eligibility</h2>
+      <p>You must be at least 18 years of age to use FriendMap. By creating an account, you confirm that you are 18 or older. We collect your date of birth at registration to verify this requirement.</p>
+      <p>Any account found to belong to a user under the age of 18 will be permanently deleted without notice.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📋</span> User Accounts</h2>
+      <p>When you create an account, you agree to:</p>
+      <ul>
+        <li>Provide accurate and truthful information during registration</li>
+        <li>Keep your account credentials secure and not share them with others</li>
+        <li>Be responsible for all activity that occurs under your account</li>
+        <li>Notify us immediately if you suspect any unauthorised use of your account</li>
+      </ul>
+      <p>We reserve the right to suspend or permanently delete accounts that violate these Terms.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🚫</span> Prohibited Content & Behaviour</h2>
+      <p>FriendMap has zero tolerance for objectionable content or abusive behaviour. You agree not to post, share, or engage in any of the following:</p>
+      <ul>
+        <li>Content that is hateful, racist, sexist, discriminatory, or promotes violence</li>
+        <li>Harassment, bullying, threatening, or intimidating other users</li>
+        <li>Sexual, explicit, or pornographic content of any kind</li>
+        <li>Content that exploits, endangers, or sexualises minors in any way</li>
+        <li>Spam, scams, phishing, or misleading content</li>
+        <li>Content that violates any applicable law or regulation</li>
+        <li>Impersonation of other users, public figures, or organisations</li>
+        <li>Sharing personal information of others without their consent</li>
+        <li>Any content that disrupts, damages, or interferes with the app or its users</li>
+      </ul>
+      <p>Violations may result in immediate content removal, account suspension, or permanent ban without prior notice.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🛡️</span> Content Moderation</h2>
+      <p>FriendMap provides tools for users to report objectionable content and block abusive users. We take all reports seriously and commit to the following:</p>
+      <ul>
+        <li>All reported content will be reviewed within 24 hours</li>
+        <li>Content found to violate these Terms will be removed promptly</li>
+        <li>Users who repeatedly violate these Terms will be permanently removed from the platform</li>
+        <li>Blocking a user will immediately hide their content from your experience</li>
+      </ul>
+      <p>To report a community or user, use the Report option available within the app. To block a user, use the Block option in the community member list.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">📍</span> Location</h2>
+      <p>FriendMap requests access to your device location to centre the map on your position and show nearby communities. Your precise location is never stored, tracked over time, or shared with other users.</p>
+      <p>Granting location permission is optional. You can use FriendMap without it, though the map will default to a general view.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">💬</span> User-Generated Content</h2>
+      <p>You retain ownership of any content you post on FriendMap, including messages, community names, and meetup suggestions. By posting content, you grant FriendMap a non-exclusive, royalty-free licence to display and distribute that content within the app.</p>
+      <p>You are solely responsible for the content you post. FriendMap does not endorse any user-generated content and is not liable for content posted by users.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🗑️</span> Account Deletion</h2>
+      <p>You may delete your account at any time from the User Settings screen within the app. Upon deletion, all of your personal data, messages, and uploaded content will be permanently and irreversibly removed from our systems.</p>
+      <p>We reserve the right to delete accounts that violate these Terms at our sole discretion.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">⚖️</span> Disclaimer & Limitation of Liability</h2>
+      <p>FriendMap is provided on an "as is" basis without warranties of any kind. We do not guarantee that the app will be available at all times, error-free, or free from harmful components.</p>
+      <p>To the fullest extent permitted by law, FriendMap shall not be liable for any indirect, incidental, or consequential damages arising from your use of the app, including but not limited to loss of data, personal injury, or damages resulting from interactions with other users.</p>
+      <p>You are responsible for your own interactions with other users. FriendMap is not responsible for the conduct of any user, whether online or offline.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">🔄</span> Changes to These Terms</h2>
+      <p>We may update these Terms of Service from time to time. When we do, we will update the "Last updated" date at the top of this page. Continued use of FriendMap after changes are posted constitutes your acceptance of the updated Terms.</p>
+      <p>We encourage you to review these Terms periodically.</p>
+    </section>
+
+    <section>
+      <h2><span class="icon">✉️</span> Contact Us</h2>
+      <p>If you have any questions about these Terms, want to report a violation, or need support, please get in touch with us.</p>
+      <div class="contact-box">
+        <p>Get in touch with the FriendMap team</p>
+        <a href="mailto:friendmap.app@proton.me">friendmap.app@proton.me</a>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.8);">We aim to respond to all requests within 7 days.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2026 FriendMap. All rights reserved.
+  </footer>
+
+</body>
+</html>
