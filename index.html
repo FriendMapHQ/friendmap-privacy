@@ -243,7 +243,7 @@
   <header>
     <div class="logo">FriendMap<span></span></div>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: June 2026</p>
+    <p class="last-updated">Last updated: November 2026</p>
   </header>
 
   <div class="container">
@@ -262,12 +262,14 @@
       <h2><span class="icon">📋</span> What Data We Collect</h2>
       <p>We collect the following personal data when you use FriendMap:</p>
       <ul>
-        <li><strong>Account information</strong> — your username, email address, date of birth, and profile picture (optional)</li>
+        <li><strong>Account information</strong> — your username, email address, date of birth, and the avatar you choose</li>
         <li><strong>Location data</strong> — your approximate location, used to show nearby communities on the map and to notify you when a new community is created near you. Your location is never visible to other users. See the Location Data section below for full details.</li>
         <li><strong>Messages and content</strong> — messages you send in community chats, meetup suggestions, and votes</li>
         <li><strong>Community activity</strong> — communities you create or join, and any meetups you participate in</li>
         <li><strong>Push notification token</strong> — a device token used to send you notifications about community activity and meetup reminders (via Expo)</li>
-        <li><strong>Reports</strong> — if you submit a report about a user or community, we store the reason and any description you provide</li>
+        <li><strong>Reports</strong> — if you submit a report about a user or community, or block someone, we store the reason and any description you provide</li>
+        <li><strong>Venue information</strong> — if you run a venue on FriendMap, its address, logo, photo and weekly meetup details, which are shown publicly in the app. We also count how many people view it each day. The list of who viewed it is cleared once the day is over, and venue owners only see the totals.</li>
+        <li><strong>Billing details</strong> — if you take a paid plan for your venue, your name, email address and billing details are handled by Stripe. We never see or store your full card number.</li>
       </ul>
     </section>
 
@@ -277,11 +279,14 @@
         <li>To create and manage your account</li>
         <li>To show you communities near your location on the map</li>
         <li>To notify you when a new community is created near you</li>
+        <li>To check that a new community is being created near you</li>
         <li>To enable real-time chat within communities</li>
         <li>To facilitate meetup planning and voting</li>
         <li>To send push notifications for community activity and meetup reminders</li>
         <li>To enforce our community guidelines through reporting and moderation</li>
         <li>To verify you are at least 18 years of age</li>
+        <li>To send account emails, such as verification codes and password resets</li>
+        <li>To manage paid plans for venues</li>
       </ul>
       <p>We do not use your data for advertising, and we do not sell your data to any third party.</p>
     </section>
@@ -290,10 +295,9 @@
       <h2><span class="icon">🗄️</span> How We Store Your Data</h2>
       <p>Your data is stored securely using the following services:</p>
       <ul>
-        <li><strong>MongoDB Atlas</strong> — stores your account information, messages, community data, and reports on secure cloud servers</li>
-        <li><strong>Cloudinary</strong> — stores profile pictures and community avatars as images on a secure content delivery network</li>
+        <li><strong>MongoDB Atlas</strong> — stores your account information, messages, community data, venue logos and photos, and reports on secure cloud servers</li>
       </ul>
-      <p>Data is transmitted over HTTPS and WebSocket Secure (WSS) connections. We retain your data for as long as your account is active. When you delete your account, all of your personal data, messages, and uploaded images are permanently deleted.</p>
+      <p>Data is transmitted over HTTPS and WebSocket Secure (WSS) connections. We retain your data for as long as your account is active. When you delete your account, your account information and messages are permanently deleted, and any paid plan is cancelled. We may keep reports and block records involving your account, because we need them to keep people safe. Stripe keeps billing records as required by law. If an account is banned, we keep the account and its messages as a safety record, hidden from other users, and so it can't simply sign up again.</p>
     </section>
 
     <section>
@@ -314,11 +318,6 @@
             <td>Account info, messages, community data</td>
           </tr>
           <tr>
-            <td>Cloudinary</td>
-            <td>Image storage</td>
-            <td>Profile and community avatar images</td>
-          </tr>
-          <tr>
             <td>Google Maps SDK</td>
             <td>Map display</td>
             <td>No personal data shared</td>
@@ -333,19 +332,30 @@
             <td>Backend hosting</td>
             <td>Standard server request logs</td>
           </tr>
+          <tr>
+            <td>Resend</td>
+            <td>Sending emails</td>
+            <td>Email address, username and the email's contents</td>
+          </tr>
+          <tr>
+            <td>Stripe</td>
+            <td>Payments for paid venue plans</td>
+            <td>Name, email address and billing details</td>
+          </tr>
         </tbody>
       </table>
     </section>
 
     <section>
       <h2><span class="icon">📍</span> Location Data</h2>
-      <p>FriendMap requests access to your device location for two purposes:</p>
+      <p>FriendMap requests access to your device location for three purposes:</p>
       <ul>
         <li><strong>Map display</strong> — to centre the map on your position and show nearby communities</li>
         <li><strong>Nearby notifications</strong> — to notify you when a new community is created within approximately 5km of your last known location</li>
+        <li><strong>Creating a community</strong> — to check that a new community is being created near where you are</li>
       </ul>
-      <p>Your location is never visible to other users of the app. It is stored on our servers solely to power nearby community notifications and is automatically cleared if it has not been updated within 48 hours.</p>
-      <p>We do not track your location continuously or in the background. Your location is only recorded when you open the app and grant location permission.</p>
+      <p>Your location is never visible to other users of the app. We store only your most recent location on our servers, for the purposes above, and it is automatically cleared once it is more than 48 hours old.</p>
+      <p>We do not track your location continuously or in the background. Your location is only recorded while you use the app with location permission granted.</p>
       <p>Location permission is optional — you can use FriendMap without granting location access, though the map will default to a general view of Ireland and nearby notifications will not be available.</p>
     </section>
 
@@ -372,8 +382,8 @@
       <p>You have the following rights regarding your personal data:</p>
       <ul>
         <li><strong>Access</strong> — you can view your account information in the app at any time</li>
-        <li><strong>Correction</strong> — you can update your username and profile picture in User Settings</li>
-        <li><strong>Deletion</strong> — you can permanently delete your account and all associated data from the User Settings screen. This action is immediate and irreversible.</li>
+        <li><strong>Correction</strong> — you can update your username and avatar in User Settings</li>
+        <li><strong>Deletion</strong> — you can permanently delete your account from the User Settings screen. This action is immediate and irreversible. See How We Store Your Data for the limited records we keep.</li>
         <li><strong>Data requests</strong> — you can contact us to request a copy of your data or ask any questions about how your data is used</li>
       </ul>
     </section>
